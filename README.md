@@ -5,4 +5,4 @@ After careful consideration and much discussion, our team came to the conclusion
 
 This tool could be used to develop more narrow or focused strategies for natural resource management across the state of New Jersey. It could also be used for planning, implementation, and monitoring of sustainable forest management and could later be integrated with forest management education and communication activities. The goal in using this tool is to engage with the public and natural resource managers effectively and efficiently both on an internal level (inter-agency cooperation) and an external level (external stakeholders and the public) to sustainably manage New Jersey’s forested resources in a climate-smart manner.
 
-### Please check out our wiki page for more information on yield curves, methodology, and results!
+### Please check out our [wiki page](https://github.com/New-Jersey-Forest-Service/ForCARMA/wiki) for more information on yield curves, methodology, and results!
