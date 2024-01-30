@@ -1,0 +1,136 @@
+* Developed by the NJ State Forest Service, Bernard Isaacson, Courtney Willitts, and others.
+* Date of Creation:  2023.
+
+* Establishment of Regeneration based on total number of seedlings by species per a particular RDI or SDI from species present at the time of cycle start.
+
+* See .kcp--SpGrpBAbySpeciesAndSeedlingsBySpecies-- for detailed information of how SeedXX and TSGTProp are computed.
+* For every species that should be included in the Elm Ash Cottonwood FIA forest type group and corresponding species group in the FVS .kcp previously
+* used, if the number of seedlings per acre, SeedXX, is greater than the TSGTProp--1% of the total seedlings per acre for that stand-- then natural regeneration
+* is to be established during that cycle for that SeedXX amount. It then moves on to determine each species and finishes.
+
+IF
+SeedRM gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (RM, SeedRM, 100, 1, 0)
+End
+
+IF
+SeedWA gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (WA, SeedWA, 100, 1, 0)
+End
+
+IF
+SeedSV gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (SV, SeedSV, 100, 1, 0)
+End
+
+IF
+SeedGA gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (GA, SeedGA, 100, 1, 0)
+End
+
+IF
+SeedSY gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (SY, SeedSY, 100, 1, 0)
+End
+
+IF
+SeedBC gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (BC, SeedBC, 100, 1, 0)
+End
+
+IF
+SeedSU gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (SU, SeedSU, 100, 1, 0)
+End
+
+IF
+SeedWN gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (WN, SeedWN, 100, 1, 0)
+End
+
+IF
+SeedBE gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (BE, SeedBE, 100, 1, 0)
+End
+
+IF
+SeedAE gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (AE, SeedAE, 100, 1, 0)
+End
+
+IF
+SeedRC gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (RC, SeedRC, 100, 1, 0)
+End
+
+IF
+SeedHK gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (HK, SeedHK, 100, 1, 0)
+End
+
+IF
+SeedYP gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (YP, SeedYP, 100, 1, 0)
+End
+
+IF
+SeedPN gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (PN, SeedPN, 100, 1, 0)
+End
+ENDIF

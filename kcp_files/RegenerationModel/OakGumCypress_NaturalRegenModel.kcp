@@ -1,0 +1,64 @@
+* Developed by the NJ State Forest Service, Bernard Isaacson, Courtney Willitts, and others.
+* Date of Creation:  2023.
+
+* Establishment of Regeneration based on total number of seedlings by species per a particular RDI or SDI from species present at the time of cycle start.
+
+* See .kcp--SpGrpBAbySpeciesAndSeedlingsBySpecies-- for detailed information of how SeedXX and TSGTProp are computed.
+* For every species that should be included in the Oak Gum Cypress FIA forest type group and corresponding species group in the FVS .kcp previously
+* used, if the number of seedlings per acre, SeedXX, is greater than the TSGTProp--1% of the total seedlings per acre for that stand-- then natural regeneration
+* is to be established during that cycle for that SeedXX amount. It then moves on to determine each species and finishes.
+
+IF
+SeedRM gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (RM, SeedRM, 100, 1, 0)
+End
+
+IF
+SeedAW gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (AW, SeedAW, 100, 1, 0)
+End
+
+IF
+SeedBG gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (BG, SeedBG, 100, 1, 0)
+End
+
+IF
+SeedSU gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (SU, SeedSU, 100, 1, 0)
+End
+
+IF
+SeedHY gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (HY, SeedHY, 100, 1, 0)
+End
+
+IF
+SeedMV gt TSGTProp
+THEN
+* Plant/Natural with Partial Estab Model
+Estab
+NoSprout
+Natural 0 PARMS (MV, SeedMV, 100, 1, 0)
+End
+ENDIF
