@@ -1,0 +1,57 @@
+*New Jersey Forest Service adapted to a Private Lands Stewardship scenario of a minimum harvest level of 6 cuft/acre/year
+*Date of creation:  2024
+
+ThinDBH            0   Parms(12.0,20.0,1.0,All,0.0, &                           
+(SpMcDBH(2,All,0,12.0,20.0)-(0006*PropStk)/(SpMcDBH(9,All,0,12.0,20.0)/ &       
+SpMcDBH(2,All,0,12.0,20.0)))/PropStk)                                    
+
+*SpMcDBH = Returns the trees, basal area, total cubic volume,merchantable cubic
+*foot volume, total board foot volume, quadratic mean diameter,
+*average height, percent cover, average mistletoe rating, stand density
+*index, or average diameter growth per acre for a given species, treevalue class, tree status, and range of diameter and height. The first
+*three arguments are required.
+
+*Argument 1 = code indicating which measurement is desired, as
+*follows:
+* 1 = trees per acre,
+* 2 = basal area per acre,
+* 3 = total cubic volume/acre, or
+* 4 = total board foot volume/acre
+* 5 = quadratic mean diameter
+* 6 = average height
+* 7 = percent cover
+* 8 = average dwarf mistletoe rating
+* 9 = merchantable cubic foot volume/acre
+* 10 = average diameter growth for the cycle
+* 11 = stand density index
+
+*Argument 2 = alpha or numeric species code where 0 (or All) indicates
+*that the sum over all species is desired. Numeric species codes are
+*variant specific.
+
+*Argument 3 = tree-value class (IMC codes 1,2, or 3; see Wykoff and
+*others 1982, p. 16) where 0 indicates that the sum over all tree-value
+*classes is desired.
+
+*Arguments 4 and 5 = diameter range for trees included in the sum.
+*The default values are 0.0 and 999.0.
+
+*Arguments 6 and 7 = height range for trees included in the sum. The
+*default values are 0.0 and 999.0.
+
+*Argument 8 = tree status for trees included in the sum, where 0
+*indicates live trees, 1 indicates recent mortality trees, and 2 indicates
+*harvested trees. The default value is 0.
+
+*PropStk = Proportion of Stand Considered Stockable (Group 1: Always Defined)
+
+*Event monitor variables and functions that are most commonly thought of as commodity
+*values (trees per acre, basal area per acre, and volume per acre) are based on total stand
+*area, while those most commonly thought of as biological values (stand density index,
+*crown competition factor, crown cover, etc) are based on stockable area. This is
+*important to note if users have non-stockable points in their inventory. The pre-defined
+*variable PROPSTK can be used to convert between stand statistics based on stockable
+*area and those based on total stand area. Users would divide a statistic based on total
+*stand area by PROPSTK to obtain a statistic based on stockable area; users would
+*multiply a statistic based on stockable area by PROPSTK to obtain a statistic based on
+*total stand area.
