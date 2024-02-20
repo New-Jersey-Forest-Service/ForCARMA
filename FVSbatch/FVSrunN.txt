@@ -1,0 +1,54 @@
+Batching multiple runs of the same Forest Vegetation Simulator (FVS)
+keyfile for multiple runs.
+
+The file FVSrunN.bat is a batch file that can be run at 
+the command line. It runs the FVS northeastern variant (FVSne) with
+parameters specified in the wildfire keyfile 100 times. This is useful
+for running a model with fixed parameters but variable impacts through
+randomization in the model. Examples would include insect outbreak 
+models or wildfire models where the parameters in the model might stay 
+the same but the results vary due to randomization in tree damage and 
+mortality.
+
+To use this file, place the bat file in a folder with a copy of your regional 
+variant exe file. Change the FVSne command in the bat file to match the name of 
+your regional variant exe without the exe extension. Change the "wildfire.key" 
+found after --keywordfile= to the name of the key file (with .key extension) you 
+want to run multiple times. Lastly, you can change the 100 value in the FOR loop to 
+the number of times you want the model to repeat.
+
+IN THE BAT FILE chage <these values>:
+
+FOR /L %%G IN (1,1,<number times to run>) DO (
+    FVSne --keywordfile=<your keyfile.key>
+)
+
+Here is a more detailed explanation of the batch file code:
+
+FOR /L %%G IN (1,1,100):
+
+This line initiates a FOR loop in a batch file.
+The /L flag specifies that we are iterating over a range of numbers.
+%%G is the loop variable that will take on the values from the specified range.
+(1,1,100) defines the range: it starts at 1, increments by 1, and ends at 100.
+So, the loop will run 100 times, with %%G taking values from 1 to 100.
+
+DO (:
+
+This indicates the start of the loop body.
+Everything between DO ( and the matching closing parenthesis ) will be executed 
+for each iteration of the loop
+
+FVSne --keywordfile=wildfire.key:
+Inside the loop, this line runs the command FVSne with the argument 
+--keywordfile=wildfire.key. The regional variant executable FVSne can be 
+downloaded at the USDA Forest Service's website for the Forest Vegetation Simulator 
+(FVS). This batch must be run in the same folder as the regional variant executable.
+In this case FVSne.exe. The parameter --keywordfile=wildfire.key specifies that 
+the exe file is to be executed running the wildfire.key key file which also must 
+be located in the same folder as the regional variant exe file and this batch 
+file. 
+
+It appears that FVSne is an executable or script, and it is being invoked 
+with the specified option. The --keywordfile=gm.key argument likely 
+specifies a file named gm.key
