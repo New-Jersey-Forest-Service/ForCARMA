@@ -1,9 +1,9 @@
 Batching multiple runs of the same Forest Vegetation Simulator (FVS)
-keyfile for multiple runs.
+using the same keyfile.
 
 The file FVSrunN.bat is a batch file that can be run at 
-the command line. It runs the FVS northeastern variant (FVSne) with
-parameters specified in the wildfire keyfile 100 times. This is useful
+the command line. It runs the FVS northeastern variant (FVSne from the FVS website) 
+with parameters specified in the wildfire keyfile 100 times. This is useful
 for running a model with fixed parameters but variable impacts through
 randomization in the model. Examples would include insect outbreak 
 models or wildfire models where the parameters in the model might stay 
@@ -17,7 +17,7 @@ found after --keywordfile= to the name of the key file (with .key extension) you
 want to run multiple times. Lastly, you can change the 100 value in the FOR loop to 
 the number of times you want the model to repeat.
 
-IN THE BAT FILE chage <these values>:
+IN THE BAT FILE change <these values>:
 
 FOR /L %%G IN (1,1,<number times to run>) DO (
     FVSne --keywordfile=<your keyfile.key>
@@ -48,7 +48,3 @@ In this case FVSne.exe. The parameter --keywordfile=wildfire.key specifies that
 the exe file is to be executed running the wildfire.key key file which also must 
 be located in the same folder as the regional variant exe file and this batch 
 file. 
-
-It appears that FVSne is an executable or script, and it is being invoked 
-with the specified option. The --keywordfile=gm.key argument likely 
-specifies a file named gm.key
