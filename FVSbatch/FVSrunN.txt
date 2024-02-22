@@ -2,13 +2,13 @@ Batching multiple runs of the same Forest Vegetation Simulator (FVS)
 using the same keyfile.
 
 The file FVSrunN.bat is a batch file that can be run at 
-the command line. It runs the FVS northeastern variant (FVSne from the FVS website) 
-with parameters specified in the wildfire keyfile 100 times. This is useful
-for running a model with fixed parameters but variable impacts through
-randomization in the model. Examples would include insect outbreak 
-models or wildfire models where the parameters in the model might stay 
-the same but the results vary due to randomization in tree damage and 
-mortality.
+the command line. It runs the FVS northeastern variant (FVSne from the FVS 
+website under FVS Software/Geographic Variants Package) with parameters 
+specified in the wildfire keyfile 100 times. This is usefulfor running a model 
+with fixed parameters but variable impacts through randomization in the model. 
+Examples would include insect outbreak models or wildfire models where the 
+parameters in the model might stay the same but the results vary due to 
+randomization in tree damage and mortality.
 
 To use this file, place the bat file in a folder with a copy of your regional 
 variant exe file. Change the FVSne command in the bat file to match the name of 
