@@ -1,3 +1,7 @@
+# CHANGE WHAT 'N' equals to indicate how many times you want to run each keyfile
+N = 5 
+#DO NOT EDIT BELOW THIS LINE
+
 import os
 # function runfiles takes path to a directory as input, and calls the FVS 
 # client from the command line on every keyfile in the directory
@@ -14,9 +18,9 @@ def runfiles(directory, n):
 
 a = os.getcwd() #sets working directory to current directory
 
-n = 5 # Use this to determine how many times you want to run an individual keyfile
 
-runfiles(a, n)
+
+runfiles(a, N)
 
 print("\nSuccessfully ran keyfiles")
 input("press enter to exit ")
