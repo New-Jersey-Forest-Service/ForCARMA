@@ -7,10 +7,11 @@ def runfiles(directory, n):
     for x in dir_list: #iterates through each keyfile
         if(x.endswith(".key")): #checks for .key extension
             for y in range(n):# calls FVS 'n' times
-                command ="FVSne --keywordfile=" + x #delete echo before run
+                command ="FVSne --keywordfile=" + x
                 os.system(command)
         else:
             continue
+
 a = os.getcwd() #sets working directory to current directory
 
 n = 5 # Use this to determine how many times you want to run an individual keyfile
